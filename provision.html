@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+ <header class="main-header">
+
+    <div class="header-logo">
+        <div class="logo-icon">📊</div>
+
+        <div>
+            <h1>User Analytics</h1>
+            <span>Dashboard</span>
+        </div>
+    </div>
+
+    <div class="header-actions">
+
+        <div class="header-search">
+            <span>🔍</span>
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search users..."
+            >
+        </div>
+
+        <div class="header-sort">
+            <span>↕</span>
+
+            <select id="sortSelect">
+                <option value="name">Name A-Z</option>
+                <option value="posts">Most Posts</option>
+                <option value="comments">Most Comments</option>
+            </select>
+        </div>
+
+    </div>
+
+</header>
+
+
+    <div id="loading" class="loading-overlay">
+    <div class="loading-box">
+        <div class="spinner"></div>
+        <h2>Loading Dashboard...</h2>
+        <p>Please wait while we load the data</p>
+    </div>
+</div>
+
+ <div id="error"></div>
+<div id="usersContainer"></div>
+
+<p id="noUsersMessage" style="display: none;">
+    No users found.
+</p>
+<div id="usersContainer"></div>
+<div id="userModal" class="modal">
+
+    <div class="modal-content">
+
+        <span id="closeModal">&times;</span>
+
+        <h2 id="modalName"></h2>
+
+        <p id="modalUsername"></p>
+        <p id="modalEmail"></p>
+        <p id="modalPhone"></p>
+        <p id="modalWebsite"></p>
+        <p id="modalAddress"></p>
+        <p id="modalCompany"></p>
+
+    </div>
+
+</div>
+
+<!-- <input id="searchInput" placeholder="Search users...">
+
+<select id="sortSelect">
+    <option value="">Sort by...</option>
+    <option value="name">Name A-Z</option>
+    <option value="posts">Posts</option>
+    <option value="comments">Comments</option>
+</select> -->
+
+<!-- <button class="details-btn" data-id="${user.id}">
+    View Details
+</button> -->
+
+<div class="stats">
+
+    <div class="stat-card">
+        <h3>Total Users</h3>
+        <p id="totalUsers">0</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Total Posts</h3>
+        <p id="totalPosts">0</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Total Comments</h3>
+        <p id="totalComments">0</p>
+    </div>
+
+</div> 
+
+
+<!-- Most Active User -->
+<!-- <div class="active-user">
+    <h3>🏆 Most Active User</h3>
+    <p id="activeUserName"></p>
+    <p id="activeUserPosts"></p>
+</div>
+
+<!-- ريفرش -->
+<button id="refreshBtn">Refresh Dashboard</button>
+
+
+<footer class="dashboard-footer">
+
+    <div class="footer-content">
+
+        <div class="footer-brand">
+            <h3>📊 User Analytics Dashboard</h3>
+            <p>Advanced JavaScript Task</p>
+        </div>
+
+        <div class="footer-stat">
+            <span>👥</span>
+            <div>
+                <strong id="footerUsers">10</strong>
+                <small>Total Users</small>
+            </div>
+        </div>
+
+        <div class="footer-stat">
+            <span>📝</span>
+            
+            <div>
+                <strong id="footerPosts">100</strong>
+                <small>Total Posts</small>
+            </div>
+        </div>
+
+        <div class="footer-stat">
+            <span>💬</span>
+            <div>
+                <strong id="footerComments">500</strong>
+                <small>Total Comments</small>
+            </div>
+        </div>
+
+        <div class="footer-active">
+            <span>🏆 Most Active User</span>
+            <strong id="footerActiveUser">Leanne Graham</strong>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <span>Built with Vanilla JavaScript</span>
+        <span>JSONPlaceholder API • 2026</span>
+    </div>
+
+</footer>
+     <script src="script.js"></script>
+</body>
+</html>
