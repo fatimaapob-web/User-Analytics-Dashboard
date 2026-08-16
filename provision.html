@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
  <header class="main-header">
@@ -33,6 +33,7 @@
             <span>↕</span>
 
             <select id="sortSelect">
+                 <option value="">Sort by...</option>
                 <option value="name">Name A-Z</option>
                 <option value="posts">Most Posts</option>
                 <option value="comments">Most Comments</option>
@@ -58,7 +59,7 @@
 <p id="noUsersMessage" style="display: none;">
     No users found.
 </p>
-<div id="usersContainer"></div>
+<!-- <div id="usersContainer"></div> -->
 <div id="userModal" class="modal">
 
     <div class="modal-content">
@@ -93,20 +94,20 @@
 
 <div class="stats">
 
-    <div class="stat-card">
+    <!-- <div class="stat-card">
         <h3>Total Users</h3>
         <p id="totalUsers">0</p>
-    </div>
+    </div> -->
 
-    <div class="stat-card">
+    <!-- <div class="stat-card">
         <h3>Total Posts</h3>
         <p id="totalPosts">0</p>
-    </div>
+    </div> -->
 
-    <div class="stat-card">
+    <!-- <div class="stat-card">
         <h3>Total Comments</h3>
         <p id="totalComments">0</p>
-    </div>
+    </div> -->
 
 </div> 
 
@@ -116,7 +117,7 @@
     <h3>🏆 Most Active User</h3>
     <p id="activeUserName"></p>
     <p id="activeUserPosts"></p>
-</div>
+</div> -->
 
 <!-- ريفرش -->
 <button id="refreshBtn">Refresh Dashboard</button>
@@ -128,13 +129,13 @@
 
         <div class="footer-brand">
             <h3>📊 User Analytics Dashboard</h3>
-            <p>Advanced JavaScript Task</p>
+            <p> JavaScript </p>
         </div>
 
         <div class="footer-stat">
             <span>👥</span>
             <div>
-                <strong id="footerUsers">10</strong>
+                <strong  id="totalUsers">0</strong>
                 <small>Total Users</small>
             </div>
         </div>
@@ -143,7 +144,7 @@
             <span>📝</span>
             
             <div>
-                <strong id="footerPosts">100</strong>
+                <strong id="totalPosts">0</strong>
                 <small>Total Posts</small>
             </div>
         </div>
@@ -151,20 +152,20 @@
         <div class="footer-stat">
             <span>💬</span>
             <div>
-                <strong id="footerComments">500</strong>
+                <strong id="totalComments">0</strong>
                 <small>Total Comments</small>
             </div>
         </div>
 
         <div class="footer-active">
             <span>🏆 Most Active User</span>
-            <strong id="footerActiveUser">Leanne Graham</strong>
+            <strong id="footerActiveUser"></strong>
         </div>
 
     </div>
 
     <div class="footer-bottom">
-        <span>Built with Vanilla JavaScript</span>
+        <span>JavaScript</span>
         <span>JSONPlaceholder API • 2026</span>
     </div>
 
